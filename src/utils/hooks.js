@@ -33,7 +33,7 @@ export const useDimension = () => {
         }
         return () => {
             window.onresize = () => {
-              
+
             }
         }
     })
@@ -41,5 +41,47 @@ export const useDimension = () => {
     return {
         w, 
         h
+    }
+}
+
+export const useStyle = (w, h, scale) => {
+    const size = Math.min(w, h) / 10 
+    const position = 'absolute'
+    const fixedX = w / 2
+    const fixedY = h / 2
+    const color = '#4CAF50'
+    const sf = Math.sin(Math.PI * scale)
+    return {
+        getStrokeStyle() {
+            const width = `${size}px`
+            const height = `${size}px`
+            const left = `${fixedX - size / 2}px`
+            const top = `${fixedY - size / 2}px`
+            const border = `2px solid ${color}`
+            return {
+                position, 
+                left,
+                top, 
+                width, 
+                height, 
+                border
+            }
+        },
+        getFillStyle() {
+            const upSize = size * sf 
+            const height = `${upSize}px`
+            const width = `${upSize}px`
+            const left = `${fixedX - upSize}px`
+            const top = `${fixedY - upSize}px`
+            const background = color 
+            return {
+                position, 
+                height, 
+                width, 
+                left, 
+                top, 
+                background 
+            }
+        }
     }
 }
