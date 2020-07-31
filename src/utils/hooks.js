@@ -71,8 +71,8 @@ export const useStyle = (w, h, scale) => {
             const upSize = size * sf 
             const height = `${upSize}px`
             const width = `${upSize}px`
-            const left = `${fixedX - upSize}px`
-            const top = `${fixedY - upSize}px`
+            const left = `${fixedX - upSize / 2}px`
+            const top = `${fixedY - upSize / 2}px`
             const background = color 
             return {
                 position, 

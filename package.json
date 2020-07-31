@@ -1,8 +1,8 @@
 {
   "name": "square-fill-button",
   "version": "1.0.0",
-  "description": "Made with create-react-library",
-  "author": "",
+  "description": "Made with create-react-library a square fill button",
+  "author": "anwesh_43",
   "license": "MIT",
   "repository": "/square-fill-button",
   "main": "dist/index.js",
