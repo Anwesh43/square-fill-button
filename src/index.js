@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './styles.module.css'
+import SquareFillBlock from './components/SquareFillBlock'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export {SquareFillBlock}
